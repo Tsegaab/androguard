@@ -1687,7 +1687,7 @@ class Analysis:
         for m in self.find_methods(classname=classname, methodname=methodname,
                                    descriptor=descriptor, accessflags=accessflags):
             orig_method = m.get_method()
-            log.info("Adding Method '{}' to callgraph".format(orig_method))
+            log.debug("Adding Method '{}' to callgraph".format(orig_method))
 
             if no_isolated and len(m.get_xref_to()) == 0 and len(m.get_xref_from()) == 0:
                 log.info("Skipped {}, because if has no xrefs".format(orig_method))
